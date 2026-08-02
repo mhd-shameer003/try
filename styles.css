@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.home-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('travelbg.jpg');
+}
+body.flights-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('flightbg.jpg');
+}
+body.hotels-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hotelbg.jpg');
+}
+
+body.holiday-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('holidaybg.jpg');
+}
+body.packages-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('packagebg.jpg');
+}
+body.confirmation-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('confirmbg.jpg');
+}
+body.goa-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('goabg.jpg');
+}
+body.kerala-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('keralabg.jpg');
+}
+body.greenpalace-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Green Palace.jpg');
+}
+
+body.mountain-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Green Palace.jpg');
+}
+body.seahotel-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Sea View Hotel.jpg');
+}
+
+body.ooty-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('ootybg.jpg');
+}
+
+body.kerala-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('keralabg.jpg');
+}
+
+
+body.booking-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('roombk.jpg');
+}
+
+body.payment-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('payment.png');
+}
+
+body.confirmation-page {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('payment.png');
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: #ffffff;
+}
+header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+}
+header p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.search-bar {
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    background: transparent;
+    outline: none;
+}
+.search-bar button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.search-bar button:hover {
+    background: #ff758f;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    background: #ff4d6d;
+}
+
+.offers, .hero, .cards-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+.offers h2, .hero h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+.offer-text, .hero p {
+    text-align: center;
+    color: #eee;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr; 
+    }
+}
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-container, .card img {
+    width: 100%;
+    height: 220px; 
+}
+.card img {
+    object-fit: cover; 
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 10;
+}
+.badge-discount { background: #ff4d6d; }
+.badge-seller { background: #ffb703; color: #222; }
+.badge-new { background: #2a9d8f; }
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card h3 {
+    font-size: 1.25rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+.card-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+.price {
+    color: #e63946;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+button, .btn-primary, .search-box button {
+    background: #c00505;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    text-align: center;
+}
+button:hover, .btn-primary:hover, .search-box button:hover {
+    background: #6c0305;
+}
+button:active, .btn-primary:active, .search-box button:active {
+    transform: scale(0.98);
+}
+
+.search-box button {
+    margin-top: 15px;
+}
+
+.search-box {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.search-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.search-box input, .search-box select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.hotel-filter{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+    color:white;
+    text-align:center;
+}
+
+.hotel-filter input[type="text"]{
+    width:60%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    margin:15px 0;
+    font-size:16px;
+}
+
+.filter-options{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:20px 0;
+}
+
+.filter-options label{
+    cursor:pointer;
+    font-size:17px;
+}
+
+.hotel-filter button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.hotel-filter button:hover{
+    background:#ff6f00;
+}
+
+.hotel-card{
+    align-items: center;
+    width:320px;
+    border-radius:18px;
+    gap: 25px;
+    overflow: hidden;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(8px);
+    color:white;
+    transition:0.3s;
+}
+
+.hotel-card:hover{
+    transform:translateY(-8px);
+}
+
+.hotel-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.hotel-info{
+    padding:15px;
+}
+
+.features{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:15px 0;
+}
+.features span{
+    background:rgba(255,255,255,0.2);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+.hotel-info button{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#28a745;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.hotel-info button:hover{
+    background:#1e7e34;
+}
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotels</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="hotels-page">
+
+<header>
+    <h1>Hotels</h1>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="flights.html">Flights</a>
+    <a href="packages.html">Holiday Packages</a>
+    <a href="booking.html">Booking</a>
+    <a href="payment.html">Payment</a>
+    <a href="confirmation.html">Booking Status</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<body class="hotel-card">
+<div class="hotel-filter">
+
+    <h2>🔍 Find Your Perfect Stay</h2>
+
+    <input
+        type="text"
+        id="hotelSearch"
+        placeholder="Search Hotel">
+
+    <div class="filter-options">
+
+        <label>
+            <input type="checkbox" id="wifi">
+            📶 Free WiFi
+        </label>
+
+        <label>
+            <input type="checkbox" id="pool">
+            🏊 Swimming Pool
+        </label>
+
+        <label>
+            <input type="checkbox" id="parking">
+            🅿 Parking
+        </label>
+
+    </div>
+
+    <button id="filterBtn">
+        Search Hotels
+    </button>
+
+</div>
+
+<section class="cards">
+
+    <div class="hotel-card"
+        data-name="Sea View Hotel"
+        data-wifi="yes"
+        data-pool="yes"
+        data-parking="yes">
+
+        <img src="Sea View Hotel.jpg" alt="Sea View Hotel">
+
+        <div class="hotel-info">
+
+            <h3>Sea View Hotel</h3>
+
+            <p>📍 Chennai</p>
+
+            <p>⭐⭐⭐⭐☆ (4.5)</p>
+
+            <div class="features">
+                <span>📶 WiFi</span>
+                <span>🏊 Pool</span>
+                <span>🅿 Parking</span>
+            </div>
+
+            <h2>₹2500 <small>/ Night</small></h2>
+
+            <button onclick="window.location.href='seahotel.html'">
+                View Details →
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hotel-card"
+        data-name="Green Palace"
+        data-wifi="yes"
+        data-pool="no"
+        data-parking="yes">
+
+        <img src="Green Palace.jpg" alt="Green Palace">
+
+        <div class="hotel-info">
+
+            <h3>Green Palace</h3>
+
+            <p>📍 Ooty</p>
+
+            <p>⭐⭐⭐⭐⭐ (5.0)</p>
+
+            <div class="features">
+                <span>📶 WiFi</span>
+                <span>🅿 Parking</span>
+                <span>🌄 Hill View</span>
+            </div>
+
+            <h2>₹3500 <small>/ Night</small></h2>
+
+            <button onclick="window.location.href='greenpalace.html'">
+                  View Details →→
+            </button>
+
+        </div>
+
+    </div>
+    <div class="hotel-card"
+        data-name="Mountain Resort"
+        data-wifi="no"
+        data-pool="yes"
+        data-parking="no">
+
+        <img src="Mountain Resort.jpg" alt="Mountain Resort">
+
+        <div class="hotel-info">
+
+            <h3>Mountain Resort</h3>
+
+            <p>📍 Kodaikanal</p>
+
+            <p>⭐⭐⭐⭐☆ (4.3)</p>
+
+            <div class="features">
+                <span>🏊 Pool</span>
+                <span>🌲 Nature View</span>
+                <span>🍽 Restaurant</span>
+            </div>
+
+            <h2>₹4000 <small>/ Night</small></h2>
+
+            <button onclick="window.location.href='property.html'">
+                  View Details → →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+<footer>
+    Dream Travels
+</footer>
+
+<script>
+
+document.getElementById("filterBtn").addEventListener("click", function () {
+
+    let search = document.getElementById("hotelSearch").value.toLowerCase();
+
+    let wifi = document.getElementById("wifi").checked;
+    let pool = document.getElementById("pool").checked;
+    let parking = document.getElementById("parking").checked;
+
+    let hotels = document.querySelectorAll(".hotel-card");
+
+    hotels.forEach(function(hotel){
+
+        let show = true;
+
+        if(search != "" &&
+        !hotel.dataset.name.toLowerCase().includes(search)){
+            show = false;
+        }
+
+        if(wifi && hotel.dataset.wifi != "yes"){
+            show = false;
+        }
+
+        if(pool && hotel.dataset.pool != "yes"){
+            show = false;
+        }
+
+        if(parking && hotel.dataset.parking != "yes"){
+            show = false;
+        }
+
+        if(show){
+            hotel.style.display = "block";
+        }
+        else{
+            hotel.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

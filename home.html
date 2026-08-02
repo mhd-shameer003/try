@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Travels - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+
+<header>
+    <h1>Dream Travels</h1>
+    <p>Your Journey Begins Here</p>
+</header>
+<nav>
+    <a href="home.html">Home</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="flights.html">Flights</a>
+    <a href="packages.html">Holiday Packages</a>
+      <a href="booking.html">Booking</a>
+    <a href="payment.html">Payment</a>
+    <a href="confirmation.html">booking status</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Minimized Upside-Center Search Container (Placed below Nav Bar) -->
+<div class="search-container">
+    <div class="search-bar">
+        <input 
+            type="text" 
+            id="destinationInput" 
+            placeholder="Where to? (Goa, Ooty, Kerala)">
+        <button id="searchBtn">Search</button>
+    </div>
+</div>
+
+<section class="offers">
+    <h2>🔥 Exclusive Holidays & Events</h2>
+    <p class="offer-text">
+        Grab our limited-time travel deals and enjoy unforgettable seasonal vacations!
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <span class="badge badge-discount">20% OFF</span>
+            <div class="card-img-container">
+                <img src="goa.jpg" alt="Goa">
+            </div>
+            <div class="card-content">
+                <h3>Goa Summer Beach Festival</h3>
+                <p class="card-meta">🏖 3 Days / 2 Nights • Exclusive Event</p>
+                <div class="price-container">
+                    <span class="old-price">₹11,500</span>
+                    <span class="price">₹8,999</span>
+                </div>
+                <button class="btn-primary" onclick="window.location.href='goa.html'">Book Event</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge badge-seller">BEST SELLER</span>
+            <div class="card-img-container">
+                <img src="ooty.jpg" alt="Ooty">
+            </div>
+            <div class="card-content">
+                <h3>Ooty Winter Hill Retreat</h3>
+                <p class="card-meta">🌄 2 Days / 1 Night • Premium Holiday</p>
+                <div class="price-container">
+                    <span class="old-price">₹8,000</span>
+                    <span class="price">₹6,500</span>
+                </div>
+                <button class="btn-primary" onclick="window.location.href='ooty.html'">Book Holiday</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge badge-new">NEW</span>
+            <div class="card-img-container">
+                <img src="kerala.jpg" alt="Kerala">
+            </div>
+            <div class="card-content">
+                <h3>Kerala Monsoon Backwaters</h3>
+                <p class="card-meta">🚤 5 Days / 4 Nights • Luxury Package</p>
+                <div class="price-container">
+                    <span class="old-price">₹15,000</span>
+                    <span class="price">₹12,000</span>
+                </div>
+                <button class="btn-primary" onclick="window.location.href='kerala.html'">Book Holiday</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Dream Travels | Explore • Book • Enjoy
+</footer>
+
+<script>
+document.getElementById("searchBtn").addEventListener("click", function () {
+    let dest = document.getElementById("destinationInput").value.trim().toLowerCase();
+
+    if(dest === ""){
+        alert("Please enter a destination.");
+        return;
+    }
+
+    if(dest === "goa"){
+        window.location.href = "goa.html";
+    }
+    else if(dest === "ooty"){
+        window.location.href = "ooty.html";
+    }
+    else if(dest === "kerala"){
+        window.location.href = "kerala.html";
+    }
+    else{
+        alert("Sorry! Destination not available.");
+    }
+});
+
+document.getElementById("destinationInput").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        document.getElementById("searchBtn").click();
+    }
+});
+</script>
+
+</body>
+
+<footer>
+    © 2026 Dream Travels
+</footer>
+</html>

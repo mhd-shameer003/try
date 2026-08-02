@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Travels - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+
+<header>
+    <h1>Dream Travels</h1>
+    <p>Your Journey Begins Here</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="flights.html">Flights</a>
+    <a href="packages.html">Holiday Packages</a>
+    <a href="booking.html">Contact</a>
+    <a href="payment.html">Contact</a>
+    <a href="confirmation.html">Contact</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+
+<!-- Clean search container right above the layout packages -->
+<div class="search-container">
+    <div class="search-bar">
+        <input 
+            type="text" 
+            id="destinationInput" 
+            placeholder="Search Destination (Goa, Ooty, Kerala)">
+        <button id="searchBtn">Search</button>
+    </div>
+</div>
+<section class="offers">
+
+<h2>🔥 Exclusive Holiday Packages</h2>
+
+<p class="offer-text">
+Grab our limited-time travel deals and enjoy unforgettable vacations!
+</p>
+
+<div class="cards">
+
+<div class="card">
+    <span class="badge">20% OFF</span>
+
+    <img src="goa.jpg" alt="Goa">
+
+    <h3>Goa Beach Escape</h3>
+
+    <p>🏖 3 Days / 2 Nights</p>
+
+    <p class="old-price">₹11,500</p>
+
+    <h2 class="price">₹8,999</h2>
+
+    <button onclick="window.location.href='goa.html'">
+        Book Now
+    </button>
+</div>
+
+<div class="card">
+    <span class="badge">BEST SELLER</span>
+
+    <img src="ooty.jpg" alt="Ooty">
+
+    <h3>Ooty Hill Retreat</h3>
+
+    <p>🌄 2 Days / 1 Night</p>
+
+    <p class="old-price">₹8,000</p>
+
+    <h2 class="price">₹6,500</h2>
+
+    <button onclick="window.location.href='ooty.html'">
+        Book Now
+    </button>
+</div>
+
+<div class="card">
+    <span class="badge">NEW</span>
+
+    <img src="kerala.jpg" alt="Kerala">
+
+    <h3>Kerala Backwater Tour</h3>
+
+    <p>🚤 5 Days / 4 Nights</p>
+
+    <p class="old-price">₹15,000</p>
+
+    <h2 class="price">₹12,000</h2>
+
+    <button onclick="window.location.href='kerala.html'">
+        Book Now
+    </button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+    © 2026 Dream Travels | Explore • Book • Enjoy
+</footer>
+
+<script>
+document.getElementById("searchBtn").addEventListener("click", function () {
+    let dest = document.getElementById("destinationInput").value.trim().toLowerCase();
+
+    if(dest === ""){
+        alert("Please enter a destination.");
+        return;
+    }
+
+    if(dest === "goa"){
+        window.location.href = "goa.html";
+    }
+    else if(dest === "ooty"){
+        window.location.href = "ooty.html";
+    }
+    else if(dest === "kerala"){
+        window.location.href = "kerala.html";
+    }
+    else{
+        alert("Sorry! Destination not available.");
+    }
+});
+
+document.getElementById("destinationInput").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        document.getElementById("searchBtn").click();
+    }
+});
+</script>
+
+</body>
+</html>
